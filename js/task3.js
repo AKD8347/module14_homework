@@ -23,9 +23,16 @@ function useRequest(limit, async) {
 
 //выводим ответ
 function displayResult(apiData) {
-    let card = '';
+
     apiData.forEach(item => {
-        console.log(item)
+        console.log(item);
+        let card = `<div class="main__picture">
+                        <div class="main__img">
+                            <img src="${item.download_url}" alt="${item.author}">
+                        </div>
+                        <span>${item.author}</span>
+                    </div>`;
+        cardsBox.innerHTML +=card;
     });
 
 }
