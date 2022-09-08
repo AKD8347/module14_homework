@@ -1,3 +1,4 @@
+//находим элементы на странице
 const field = document.getElementById('field');
 const btn = document.getElementById('sendReq');
 const massage = document.getElementById('massage');
