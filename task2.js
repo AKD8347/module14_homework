@@ -15,9 +15,10 @@ const jsonString = `
              ]
             }`;
 
-//парсим элемент через класс баузера
+//парсим элемент
 const jsonData = JSON.parse(jsonString);
-// console.log(jsonData);
+
+//записываем данные в обьект
 const result = {
     list: [
         {
@@ -31,4 +32,6 @@ const result = {
         }
     ]
 }
+
+//выводим результат в консоль
 console.log(result);
