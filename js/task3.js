@@ -6,16 +6,17 @@ const cardsBox = document.getElementById('cards');
 
 //запрос
 function useRequest(limit, async) {
-    console.log(limit);
-    // let data;
+   //создаем запрос
     let xhr = new XMLHttpRequest();
+    //передаем в url цыфру из поля
     xhr.open('GET', `https://picsum.photos/v2/list?limit=${limit}`, async);
-    // console.log(xhr.open);
+    //отправляем
     xhr.send();
-    // console.log(xhr.open);
+
     xhr.onload = function () {
+        //если запрос прощел
         if (xhr.status == 200) {
-            console.log(xhr.response)
+            //полученный данные праспаршиваем и передаем в функцию отображения
             displayResult(JSON.parse(xhr.response));
         }
     };
@@ -23,18 +24,18 @@ function useRequest(limit, async) {
 
 //выводим ответ
 function displayResult(apiData) {
-
+    //проходим по элементам
     apiData.forEach(item => {
-        console.log(item);
+        //создаем карточку с версткой
         let card = `<div class="main__picture">
                         <div class="main__img">
                             <img src="${item.download_url}" alt="${item.author}">
                         </div>
                         <span>${item.author}</span>
                     </div>`;
+        //добавляем верстку в блок
         cardsBox.innerHTML +=card;
     });
-
 }
 
 //вещаем событие клика на кнопку
