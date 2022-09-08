@@ -84,4 +84,5 @@ function clearField() {
     field.value = '';
     massage.classList.remove('main__msg--active');
     massage.innerText = ' ';
+    cardsBox.innerHTML = '';
 }
