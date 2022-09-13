@@ -101,12 +101,27 @@ a:hover, a:focus, a:visited {
   padding: 10px 10%;
   box-sizing: border-box;
 }
+.main__pictures--single {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
 .main__picture {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+}
+.main__picture span {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
 }
 .main__img {
   width: 100%;
